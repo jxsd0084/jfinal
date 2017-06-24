@@ -98,6 +98,7 @@ public class Duang {
 	public static <T> T duang(String singletonKey, Object target, Class<? extends Interceptor>... injectIntersClasses) {
 		return (T)Enhancer.enhance(singletonKey, target, injectIntersClasses);
 	}
+	
 }
 
 
