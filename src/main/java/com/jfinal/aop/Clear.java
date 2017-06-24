@@ -39,10 +39,13 @@ import java.lang.annotation.Target;
  * public void method(...)
  * </pre>
  */
+// 清空所有的 拦截器 或 指定拦截器
 @Inherited
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.METHOD})
 public @interface Clear {
+
 	Class<? extends Interceptor>[] value() default {};
+	
 }
 

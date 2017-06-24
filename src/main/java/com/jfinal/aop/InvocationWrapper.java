@@ -16,12 +16,14 @@
 
 package com.jfinal.aop;
 
-import java.lang.reflect.Method;
 import com.jfinal.core.Controller;
+
+import java.lang.reflect.Method;
 
 /**
  * InvocationWrapper invoke the InterceptorStack.
  */
+// 用来调用 拦截器栈
 class InvocationWrapper extends Invocation {
 	
 	private Interceptor[] inters;

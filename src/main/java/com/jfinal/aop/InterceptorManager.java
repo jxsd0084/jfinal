@@ -16,22 +16,30 @@
 
 package com.jfinal.aop;
 
+import com.jfinal.core.Controller;
+
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.concurrent.ConcurrentHashMap;
-import com.jfinal.core.Controller;
 
 /**
  * InterceptorManager.
+ *
  * 1：管理控制层、业务层全局拦截器
+ *
  * 2：缓存业务层 Class 级拦截器数组。在业务层仅有 injectInters、methodInters 数组未被整体缓存
+ *
  * 3：用于创建 Interceptor、组装 Interceptor
+ *
  * 4：除手动 new 出来的 inject 拦截器以外，其它所有拦截器均为单例
+ *
  * 5：重点关注于业务层拦截器组装性能， 控制层所有拦截器已被整体缓存
  * 
  * 无法使用 Method 或 Before 对象缓存业务层 Method 级拦截器：
+ *
  * 1：不同对象或相同对象获取同一个 Class 中同一个 Method 得到的对象 id 值不相同
+ * 
  * 2：不同对象获取同一个 method 之上的 Before 得到的对象 id 值不相同
  */
 public class InterceptorManager {

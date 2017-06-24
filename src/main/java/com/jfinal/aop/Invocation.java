@@ -16,15 +16,17 @@
 
 package com.jfinal.aop;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import com.jfinal.core.Action;
 import com.jfinal.core.Controller;
 import net.sf.cglib.proxy.MethodProxy;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 /**
  * Invocation is used to invoke the interceptors and the target method
  */
+// 用来调用 拦截器 和 目标方法
 @SuppressWarnings("unchecked")
 public class Invocation {
 	

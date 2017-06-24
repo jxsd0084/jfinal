@@ -16,11 +16,13 @@
 
 package com.jfinal.aop;
 
+import net.sf.cglib.proxy.MethodInterceptor;
+import net.sf.cglib.proxy.MethodProxy;
+
 import java.lang.reflect.Method;
 import java.util.HashSet;
 import java.util.Set;
-import net.sf.cglib.proxy.MethodInterceptor;
-import net.sf.cglib.proxy.MethodProxy;
+
 import static com.jfinal.aop.InterceptorManager.NULL_INTERS;
 
 /**
@@ -109,6 +111,7 @@ class Callback implements MethodInterceptor {
 		// excludedMethodName.remove("registerNatives");
 		return excludedMethodName;
 	}
+
 }
 
 

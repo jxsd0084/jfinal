@@ -25,11 +25,14 @@ import java.lang.annotation.Target;
 /**
  * Before is used to configure Interceptor and Validator.
  */
+// @Before 设置拦截器 和 校验器
 @Inherited
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.METHOD})
 public @interface Before {
+
 	Class<? extends Interceptor>[] value();
+
 }
 
 

@@ -19,7 +19,10 @@ package com.jfinal.aop;
 /**
  * Interceptor.
  */
+// 拦截器
 public interface Interceptor {
+
 	void intercept(Invocation inv);
+	
 }
 

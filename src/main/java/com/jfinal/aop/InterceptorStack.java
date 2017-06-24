@@ -22,6 +22,7 @@ import java.util.List;
 /**
  * InterceptorStack.
  */
+// 拦截器栈( 拦截器数组 )
 public abstract class InterceptorStack implements Interceptor {
 	
 	private Interceptor[] inters;
@@ -56,6 +57,7 @@ public abstract class InterceptorStack implements Interceptor {
 	}
 	
 	public abstract void config();
+	
 }
 
 
